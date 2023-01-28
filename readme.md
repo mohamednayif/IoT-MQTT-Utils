@@ -22,6 +22,6 @@
 
 # PN: You must install required libraries as listed on the pipfile
 
-# Bonus: Identifier monitoring tool and message sige optimizer
+# Bonus: Identifier monitoring tool and message size optimizer
 
 If you have any issues or questions about this project, please feel free to reach out and contact the repository owner or raise an issue on the repository.
