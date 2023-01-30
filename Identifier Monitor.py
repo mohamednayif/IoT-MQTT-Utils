@@ -3,6 +3,7 @@ from MQTT import MQTT
 import os
 import sys
 from time import sleep
+import subprocess
 
 def identifier_monitor(Mqtt: MQTT):
     Mqtt.subscribe_topic = input("Topic to Subscribe: ")
@@ -21,7 +22,8 @@ def identifier_monitor(Mqtt: MQTT):
             sleep(10)
             sys.exit()
     else:
-        os.system('cls')      
+        # os.system('cls')   
+        subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)   
         print("No Identifier to Monitor. Please try again.")  
         identifier_monitor(Mqtt)
 

@@ -43,7 +43,7 @@ class MQTT(Credentials):
                 self.client.username_pw_set(username=username, password=password)  
                 del username, password
                 return
-            except:
+            except Exception as e:
                 print("MQTT ::: Credentials ::: Error ::: Invalid Credentials ::: Please install another credential and try again")
                 sleep(2)
                 sys.exit()

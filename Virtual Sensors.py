@@ -158,7 +158,7 @@ class NoiseSensor:
         try:
             try:
                 self.noise = self.data_noise.pop(0)
-            except:
+            except Exception as e:
                 # print(f"Noise Sensor ::: Data Collection ::: Bucket Empty ::: {self.name} ::: {self.identifier} ::: Loading New Bucket")
                 self.data_noise = noise_data[noise_data[NOISE_SENSOR_DEVICE_ID_COLUMN] == self.data_noise_sensor][NOISE_SENSOR_DATA_COLUMN].tolist()
                 self.noise = self.data_noise.pop(0)
