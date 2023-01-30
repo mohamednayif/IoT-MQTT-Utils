@@ -27,7 +27,8 @@ jobs:
     - name: Install dependencies from Pipfile.lock
       run: |
         pip install pipenv
-        pip install --no-deps --ignore-installed -r <(pipenv lock -r)
+        pipenv install
+#         pip install --no-deps --ignore-installed -r <(pipenv lock -r)
         
 #     - name: Install dependencies
 #       run: |
