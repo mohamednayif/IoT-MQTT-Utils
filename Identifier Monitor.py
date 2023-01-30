@@ -22,7 +22,8 @@ def identifier_monitor(Mqtt: MQTT):
             sleep(10)
             sys.exit()
     else:
-        os.system('cls')      
+        # os.system('cls')      
+        subprocess.run(["cls"] if os.name == "nt" else ["clear"], check=True)
         print("No Identifier to Monitor. Please try again.")  
         identifier_monitor(Mqtt)
 
