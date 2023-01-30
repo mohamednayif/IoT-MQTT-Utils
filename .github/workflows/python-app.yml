@@ -36,9 +36,9 @@ jobs:
     
     - name: Build with PyInstaller
       run: |
-        pipenv run pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py"
+        pipenv run pyinstaller -w --onefile --console test.py
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        path: "dist/Message Size Optimizer"
+        path: "dist"
