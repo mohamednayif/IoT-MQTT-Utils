@@ -1,6 +1,6 @@
 # Welcome to the MQTT project!
 
-Application Link: https://github.com/mohamednayif/MQTT/suites/10655986828/artifacts/532586971
+For Windows PC: https://github.com/mohamednayif/MQTT/suites/10655986828/artifacts/532586971
 
 ### This project is contains virtual sensor that can be used to simulate sensor data for testing purposes. The Virtual Sensor can be used to simulate data from the following sensors:
 ### 1. Air Quality Sensor (live)
