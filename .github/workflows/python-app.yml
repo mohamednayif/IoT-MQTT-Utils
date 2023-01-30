@@ -26,17 +26,10 @@ jobs:
       run: |
         pip install pipenv
         pipenv install
-#         pip install --no-deps --ignore-installed -r <(pipenv lock -r)
-        
-#     - name: Install dependencies
-#       run: |
-#         python -m pip install --upgrade pip
-#         pip install flake8 pytest
-#         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Build with PyInstaller
       run: |
-        pipenv run pyinstaller -w --onefile --console file.py
+        pipenv run pyinstaller -w --onefile --console file.py --distpath apps
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
