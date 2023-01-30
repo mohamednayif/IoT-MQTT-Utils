@@ -43,4 +43,4 @@ If you have any issues or questions about this project, please feel free to reac
 </a>
 
 
-**Mohd Azeem** - [@mohamednayif](https://github.com/mohamednayif/)
+**Mohamed Nayif** - [@mohamednayif](https://github.com/mohamednayif/)
