@@ -4,10 +4,10 @@
 name: Python application
 
 on:
-  # push:
-  #   branches: [ "main" ]
-  workflow_dispatch:
+  push:
     branches: [ "main" ]
+  # workflow_dispatch:
+  #   branches: [ "main" ]
 
 permissions:
   contents: read
@@ -32,9 +32,9 @@ jobs:
     - name: Build with PyInstaller
       run: |
         pipenv run pyinstaller -w --onefile --console --name="Ambient Sensor" "Ambient Sensor.py" --distpath apps
-        pipenv run pyinstaller --onefile --console --name="MQTT Credentials Installer" "Credentials Installer.py" --distpath apps
-        pipenv run pyinstaller --onefile --console --name="MQTT Identifier Monitor" "Identifier Monitor.py" --distpath apps
-        pipenv run pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py" --distpath apps
+        pipenv run pyinstaller --onefile --console --name="Credentials Installer" "Credentials Installer.py" --distpath apps
+        pipenv run pyinstaller --onefile --console --name="Identifier Monitor" "Identifier Monitor.py" --distpath apps
+        pipenv run pyinstaller --onefile --console --name="Message Size Optimizer" "Message Size Optimizer.py" --distpath apps
         pipenv run pyinstaller -w --onefile --name "Virtual Sensors" "Virtual Sensors.py" --distpath apps
         
     - name: Upload build artifacts

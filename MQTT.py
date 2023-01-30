@@ -51,9 +51,7 @@ class MQTT(Credentials):
             try:
                 self.credentials_installer()
             except Exception as e:
-                print(f"MQTT ::: Credentials ::: Error ::: {e}")  
-                sleep(2)
-                sys.exit()
+                print(f"MQTT ::: Credentials ::: Error ::: {e}")
 
     def credentials_installer(self):
         try:
@@ -64,7 +62,9 @@ class MQTT(Credentials):
                     print("MQTT ::: Credentials Installer ::: Success")
                     self.load_credentials()
             else:
-                print("MQTT ::: Credentials Installer ::: Error ::: Installation file not found")
+                print("MQTT ::: Credentials Installer ::: Error ::: Installation file not found")  
+                sleep(2)
+                sys.exit()
         except Exception as e:
             print(f"MQTT ::: Credentials Installer ::: Error ::: {e}")
             sys.exit()
