@@ -36,9 +36,9 @@ jobs:
     
     - name: Build with PyInstaller
       run: |
-        pipenv run pyinstaller -w --onefile --console test.py
+        pipenv run pyinstaller -w --onefile --console file.py
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        path: "apps/file"
+        path: "apps/*"
