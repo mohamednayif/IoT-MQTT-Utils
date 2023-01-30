@@ -56,7 +56,6 @@ class MQTT(Credentials):
     def credentials_installer(self):
         try:
             if os.path.exists(CREDENTIALS_INSTALLER):     
-                print(f'start "{CREDENTIALS_INSTALLER}"')
                 process = subprocess.Popen(f"start {CREDENTIALS_INSTALLER}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
                 if process.returncode == 0:
