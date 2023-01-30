@@ -40,5 +40,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: MQTT.zip
+        name: MQTT
         path: "apps/*"
