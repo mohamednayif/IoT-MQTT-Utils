@@ -1,4 +1,4 @@
-# pyinstaller --onefile --console --name="MQTT Credentials Installer" "Credentials Installer.py"
+# pyinstaller --onefile --console --name="MQTT Credentials Installer" "Credentials Installer.py" --specpath=build
 import json
 import getpass
 from Credentials import Credentials

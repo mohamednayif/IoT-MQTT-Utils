@@ -1,4 +1,4 @@
-# pyinstaller --onefile --console --name="MQTT Identifier Monitor" "Identifier Monitor.py"
+# pyinstaller --onefile --console --name="MQTT Identifier Monitor" "Identifier Monitor.py" --specpath=build
 from MQTT import MQTT 
 import os
 import sys

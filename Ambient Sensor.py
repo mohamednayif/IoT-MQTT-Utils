@@ -1,4 +1,4 @@
-# pyinstaller -w --onefile --console --name="Ambient Sensor" "Ambient Sensor.py"
+# pyinstaller -w --onefile --console --name="Ambient Sensor" "Ambient Sensor.py"  --specpath=build
 import datetime
 import os
 from time import sleep

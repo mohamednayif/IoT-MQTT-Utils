@@ -1,4 +1,4 @@
-# pyinstaller -w --onefile --name "Virtual Sensors" "Virtual Sensors.py"
+# pyinstaller -w --onefile --name "Virtual Sensors" "Virtual Sensors.py" --specpath=build
 import asyncio
 import datetime
 from meteostat import Point, Hourly

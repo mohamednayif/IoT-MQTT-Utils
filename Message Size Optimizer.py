@@ -1,4 +1,4 @@
-# pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py"
+# pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py" --specpath=build
 from MQTT import MQTT 
 import pandas as pd
 import sys
