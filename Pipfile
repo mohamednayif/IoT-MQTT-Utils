@@ -4,13 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-meteostat = "*"
-aiohttp = "*"
-paho-mqtt = "*"
-pyinstaller = "*"
-requests = "*"
-cryptography = "*"
-pandas = "*"
+
 
 [dev-packages]
 
