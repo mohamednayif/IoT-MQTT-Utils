@@ -9,7 +9,7 @@ TOPIC = "TOPIC"
 CREDENTIALS_FILE = "credentials.json"
 
 # Credentials Installer
-CREDENTIALS_INSTALLER = "Credentials Installer.exe"
+CREDENTIALS_INSTALLER = "CredentialsInstaller.exe"
 
 # Message Size Optimizer
 STANDARD_POINT_FILE = "Standard Point Name.csv" # Standard Point Name.csv is a csv file with the following columns: Point Name, point_shorten

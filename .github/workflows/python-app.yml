@@ -32,7 +32,7 @@ jobs:
     - name: Build with PyInstaller
       run: |
         pipenv run pyinstaller -w --onefile --console --name="Ambient Sensor" "Ambient Sensor.py" --distpath apps
-        pipenv run pyinstaller --onefile --console --name="Credentials Installer" "Credentials Installer.py" --distpath apps
+        pipenv run pyinstaller --onefile --console --name="CredentialsInstaller" "Credentials Installer.py" --distpath apps
         pipenv run pyinstaller --onefile --console --name="Identifier Monitor" "Identifier Monitor.py" --distpath apps
         pipenv run pyinstaller --onefile --console --name="Message Size Optimizer" "Message Size Optimizer.py" --distpath apps
         pipenv run pyinstaller -w --onefile --name "Virtual Sensors" "Virtual Sensors.py" --distpath apps

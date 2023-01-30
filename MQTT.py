@@ -32,8 +32,8 @@ class MQTT(Credentials):
     def load_credentials(self):
         if os.path.exists(f"{ASSETS_PATH}{CREDENTIALS_FILE}"):
             print("MQTT ::: Credentials ::: Loading credentials from file.")
-            with open(f"{ASSETS_PATH}{CREDENTIALS_FILE}", "r") as f:
-                credentials = json.load(f)
+            with open(f"{ASSETS_PATH}{CREDENTIALS_FILE}", "r") as secrets:
+                credentials = json.load(secrets)
             try:
                 username = self.decrypt(credentials[USERNAME])
                 password = self.decrypt(credentials[PASSWORD])
@@ -55,7 +55,8 @@ class MQTT(Credentials):
 
     def credentials_installer(self):
         try:
-            if os.path.exists(CREDENTIALS_INSTALLER):
+            if os.path.exists(CREDENTIALS_INSTALLER):     
+                print(f'start "{CREDENTIALS_INSTALLER}"')
                 process = subprocess.Popen(f"start {CREDENTIALS_INSTALLER}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
                 if process.returncode == 0:
