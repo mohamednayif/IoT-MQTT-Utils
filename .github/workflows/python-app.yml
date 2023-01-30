@@ -26,7 +26,6 @@ jobs:
       run: |
         pip install pipenv
         pipenv install
-        pipenv run
 #         pip install --no-deps --ignore-installed -r <(pipenv lock -r)
         
 #     - name: Install dependencies
@@ -37,7 +36,7 @@ jobs:
     
     - name: Build with PyInstaller
       run: |
-        pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py"
+        pipenv run pyinstaller --onefile --console --name="MQTT Message Size Optimizer" "Message Size Optimizer.py"
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v2
