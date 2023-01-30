@@ -31,6 +31,7 @@ class MQTT(Credentials):
         
     def load_credentials(self):
         if os.path.exists(f"{ASSETS_PATH}{CREDENTIALS_FILE}"):
+            print("MQTT ::: Credentials ::: Loading credentials from file.")
             with open(f"{ASSETS_PATH}{CREDENTIALS_FILE}", "r") as f:
                 credentials = json.load(f)
             try:
@@ -55,10 +56,9 @@ class MQTT(Credentials):
                 sys.exit()
 
     def credentials_installer(self):
-        credentials_installer_file_path = "Credentials_Installer.exe"
         try:
-            if os.path.exists(credentials_installer_file_path):
-                process = subprocess.Popen(f"start {credentials_installer_file_path}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            if os.path.exists(CREDENTIALS_INSTALLER):
+                process = subprocess.Popen(f"start {CREDENTIALS_INSTALLER}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
                 if process.returncode == 0:
                     print("MQTT ::: Credentials Installer ::: Success")
@@ -67,6 +67,7 @@ class MQTT(Credentials):
                 print("MQTT ::: Credentials Installer ::: Error ::: Installation file not found")
         except Exception as e:
             print(f"MQTT ::: Credentials Installer ::: Error ::: {e}")
+            sys.exit()
 
     def connect(self, final = False):
         try:            
