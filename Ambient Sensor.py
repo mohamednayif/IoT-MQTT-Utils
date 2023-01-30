@@ -4,6 +4,7 @@ import os
 from time import sleep
 from meteostat import Point, Hourly
 from datetime import timedelta, datetime
+import platform
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -28,6 +29,12 @@ class AmbientSensor:
             print(f"Ambient Sensor ::: Data Collection ::: Error ::: {e}")
             return None
 
+def clear_terminal():
+    if platform.system() == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def main():
     result = None
     while True:
@@ -37,11 +44,11 @@ def main():
             longitude = float(input("Enter longitude: "))
             latitude = float(input("Enter latitude: "))
             result = AmbientSensor(longitude=longitude, latitude=latitude).collect_latest()
-            os.system('cls')
+            clear_terminal()
         except Exception as e:
             print(f"Error: {e}")
             sleep(5)
-            os.system('cls')
+            clear_terminal()
 
 if __name__ == "__main__":
     main()
