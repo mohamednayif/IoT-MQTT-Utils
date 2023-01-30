@@ -26,7 +26,7 @@ jobs:
       run: |
         pip install pipenv
         pipenv install
-        run pipenv shell
+        pipenv shell
 #         pip install --no-deps --ignore-installed -r <(pipenv lock -r)
         
 #     - name: Install dependencies
