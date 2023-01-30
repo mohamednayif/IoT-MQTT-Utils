@@ -15,7 +15,7 @@ For Windows PC: https://github.com/mohamednayif/MQTT/suites/10656995878/artifact
 ### 2. Noise Sensor (historical)
 ### 3. Ambient Temperature Sensor (live)
 
-#### All the project files are to be placed inside the assets folder. Samples are included.
+#### All the project files are to be placed inside the assets folder. Samples asset folder is included.
 
 #### The Virtual Sensor is designed to work with MQTT broker by configuring it by using the Credentials Installer. All the credentials will be encrypted and stored in local PC. To use the Virtual Sensor, you first need to configure your credentials by running the Credentials Installer. The Credentials Installer will generate a credentials.json file which is specific to your PC and must be used with the Virtual Sensor on the same PC.
 
