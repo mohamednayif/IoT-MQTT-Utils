@@ -1,14 +1,14 @@
 # Welcome to the IoT-MQTT-Utils project!
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/mohamednayif/MQTT)
-[![CodeFactor](https://www.codefactor.io/repository/github/mohamednayif/MQTT/badge)](https://www.codefactor.io/repository/github/mohamednayif/MQTT)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/mohamednayif/IoT-MQTT-Utils)
+[![CodeFactor](https://www.codefactor.io/repository/github/mohamednayif/IoT-MQTT-Utils/badge)](https://www.codefactor.io/repository/github/mohamednayif/IoT-MQTT-Utils)
 ![Python](https://img.shields.io/badge/python-v3.11%2B-blue)
-![GitHub Release Date](https://img.shields.io/github/release-date/mohamednayif/MQTT?logo=github)
-![GitHub last commit](https://img.shields.io/github/last-commit/mohamednayif/MQTT?logo=github)
-![GitHub Repo stars](https://img.shields.io/github/stars/mohamednayif/MQTT?style=social)
-![GitHub forks](https://img.shields.io/github/forks/mohamednayif/MQTT?style=social)
+![GitHub Release Date](https://img.shields.io/github/release-date/mohamednayif/IoT-MQTT-Utils?logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/mohamednayif/IoT-MQTT-Utils?logo=github)
+![GitHub Repo stars](https://img.shields.io/github/stars/mohamednayif/IoT-MQTT-Utils?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mohamednayif/IoT-MQTT-Utils?style=social)
 
-For Windows PC: https://github.com/mohamednayif/MQTT/suites/10656995878/artifacts/532652541
+For Windows PC: https://github.com/mohamednayif/IoT-MQTT-Utils/suites/10656995878/artifacts/532652541
 
 ### This project is contains virtual sensor that can be used to simulate sensor data for testing purposes. The Virtual Sensor can be used to simulate data from the following sensors:
 ### 1. Air Quality Sensor (live)
@@ -39,7 +39,7 @@ If you have any issues or questions about this project, please feel free to reac
 # Developer
 
 <a href="https://github.com/mohamednayif/">
-  <img src="https://contrib.rocks/image?repo=mohamednayif/MQTT" />
+  <img src="https://contrib.rocks/image?repo=mohamednayif/IoT-MQTT-Utils" />
 </a>
 
 
