@@ -1,4 +1,4 @@
-# Welcome to the MQTT project!
+# Welcome to the IoT-MQTT-Utils project!
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/mohamednayif/MQTT)
 [![CodeFactor](https://www.codefactor.io/repository/github/mohamednayif/MQTT/badge)](https://www.codefactor.io/repository/github/mohamednayif/MQTT)
