@@ -4,23 +4,23 @@ import os
 import sys
 from time import sleep
 import platform
+import subprocess
 
 def identifier_monitor(Mqtt: MQTT):
     Mqtt.subscribe_topic = input("Topic to Subscribe: ")
     Mqtt.identifier_to_monitor = input("Identifier to Monitor: ")
-    print("\nPress Ctrl+C to stop\n")
-    if Mqtt.identifier_to_monitor is not None:
+    if Mqtt.identifier_to_monitor is not "":
         try:
+            print("\nPress Ctrl+C to stop\n")
             Mqtt.connect()
             Mqtt.client.loop_forever()
         except KeyboardInterrupt:
-            Mqtt.disconnect()
-            sys.exit()
+            Mqtt.disconnect()            
         except Exception as e:
-            Mqtt.disconnect()
-            print(f"Identifier Monitor ::: Error ::: {e}")
-            sleep(10)
-            sys.exit()
+            print(f"Identifier Monitor ::: Error ::: {e}")  
+        print("Application will be closed in 5 seconds.")
+        sleep(5)
+        sys.exit()
     else:
         clear_terminal() 
         print("No Identifier to Monitor. Please try again.")  
@@ -28,9 +28,9 @@ def identifier_monitor(Mqtt: MQTT):
 
 def clear_terminal():
     if platform.system() == 'Windows':
-        os.system('cls')
+        subprocess.run(["cmd.exe", "/c", "cls"], check=True)
     else:
-        os.system('clear')
+        subprocess.run(["clear"], check=True)
 
 def main():
     Mqtt = MQTT(on_connect_funcs=['subscribe'], on_message_funcs=['identifier_monitor'])     

@@ -146,3 +146,6 @@ class MQTT(Credentials):
                 optimum_message = optimum_message.replace(point_name, shorten_name)
             
         print(f"MQTT ::: Message Size Monitor ::: Original_size ::: {len(raw_message)} ::: Module_Optimized_size ::: {len(module_optimized)} ::: Point_Optimized_size ::: {len(point_optimized)} ::: Optimum_size ::: {len(optimum_message)} ::: Percentage Optimized ::: {round((1-len(optimum_message)/len(raw_message))*100, 2)}%")
+    
+    def disconnect(self):
+        self.client.disconnect()
