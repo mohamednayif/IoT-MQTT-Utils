@@ -8,7 +8,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mohamednayif/IoT-MQTT-Utils?logo=github)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mohamednayif/IoT-MQTT-Utils?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/mohamednayif/IoT-MQTT-Utils?style=social)
-[![GitHub license](https://img.shields.io/github/license/mohamednayif/IoT-MQTT-Utils.svg)](https://github.com/mohamdnayif/IoT-MQTT-Utils/blob/main/LICENSEE)
+[![GitHub license](https://img.shields.io/github/license/mohamednayif/IoT-MQTT-Utils.svg)](https://github.com/mohamdnayif/IoT-MQTT-Utils/blob/main/LICENSE)
 
 For Windows PC: https://github.com/mohamednayif/IoT-MQTT-Utils/suites/10656995878/artifacts/532652541
 
