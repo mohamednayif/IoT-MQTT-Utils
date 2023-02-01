@@ -5,6 +5,7 @@ from time import sleep
 from meteostat import Point, Hourly
 from datetime import timedelta, datetime
 import platform
+import subprocess
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -31,9 +32,9 @@ class AmbientSensor:
 
 def clear_terminal():
     if platform.system() == 'Windows':
-        os.system('cls')
+        subprocess.run(["C:\\Windows\\System32\\cmd.exe", "/c", "cls"], check=True)
     else:
-        os.system('clear')
+        subprocess.run(["/usr/bin/clear"], check=True)
 
 def main():
     result = None
