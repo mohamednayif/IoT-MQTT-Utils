@@ -17,8 +17,8 @@ This project is designed to simulate sensor data for testing purposes. It includ
 To set up and use the Virtual Sensor, follow these steps:
 
 1. Run the Credentials Installer.
-2. Follow the prompts to configure your credentials. This will generate a "credentials.json" file in the same directory.
-3. Make sure the "credentials.json" file is in the same directory as the Virtual Sensor.
+2. Follow the prompts to configure your credentials. This will generate a "credentials.json" file in the assets directory.
+3. Make sure the assets folder is in the same directory as the Virtual Sensor.
 4. Run the Virtual Sensor.
 5. The Virtual Sensor will now be able to read sensor data and perform its functionality.
 
