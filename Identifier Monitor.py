@@ -28,9 +28,9 @@ def identifier_monitor(Mqtt: MQTT):
 
 def clear_terminal():
     if platform.system() == 'Windows':
-        subprocess.run(["cmd.exe", "/c", "cls"], check=True)
+        subprocess.run(["C:\\Windows\\System32\\cmd.exe", "/c", "cls"], check=True)
     else:
-        subprocess.run(["clear"], check=True)
+        subprocess.run(["/usr/bin/clear"], check=True)
 
 def main():
     Mqtt = MQTT(on_connect_funcs=['subscribe'], on_message_funcs=['identifier_monitor'])     
