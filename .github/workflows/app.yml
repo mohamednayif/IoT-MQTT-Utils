@@ -4,8 +4,8 @@
 name: Windows Application
 
 on:
-  # push:
-  #   branches: [ "main" ]
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
     branches: [ "main" ]
 
