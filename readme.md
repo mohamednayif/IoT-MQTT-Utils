@@ -1,5 +1,6 @@
 # Welcome to the IoT-MQTT-Utils project!
 
+[![Made with Python](https://img.shields.io/badge/made%20with-Python-blue.svg)](https://www.python.org)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/mohamednayif/IoT-MQTT-Utils)
 [![CodeFactor](https://www.codefactor.io/repository/github/mohamednayif/IoT-MQTT-Utils/badge)](https://www.codefactor.io/repository/github/mohamednayif/IoT-MQTT-Utils)
 ![Python](https://img.shields.io/badge/python-v3.11%2B-blue)
@@ -7,6 +8,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mohamednayif/IoT-MQTT-Utils?logo=github)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mohamednayif/IoT-MQTT-Utils?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/mohamednayif/IoT-MQTT-Utils?style=social)
+[![GitHub license](https://img.shields.io/github/license/mohamednayif/IoT-MQTT-Utils.svg)](https://github.com/mohamdnayif/IoT-MQTT-Utils/blob/master/LICENSE)
 
 For Windows PC: https://github.com/mohamednayif/IoT-MQTT-Utils/suites/10656995878/artifacts/532652541
 
