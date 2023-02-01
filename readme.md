@@ -10,7 +10,6 @@
 ![GitHub forks](https://img.shields.io/github/forks/mohamednayif/IoT-MQTT-Utils?style=social)
 [![GitHub license](https://img.shields.io/github/license/mohamednayif/IoT-MQTT-Utils.svg)](https://github.com/mohamednayif/IoT-MQTT-Utils/blob/main/LICENSE)
 
-# IoT-MQTT-Utils
 This project is designed to simulate sensor data for testing purposes. It includes virtual sensors for Air Quality Sensor (live), Noise Sensor (historical), and Ambient Temperature Sensor (live). The project files should be placed inside the assets folder, and a sample assets folder is included.
 
 ## Setting up the Virtual Sensor
