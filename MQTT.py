@@ -1,3 +1,4 @@
+# pyinstaller -w --onefile --console --name="Ambient Sensor" "Ambient Sensor.py"  --specpath=build
 import sys
 import subprocess
 from Credentials import Credentials
@@ -28,6 +29,8 @@ class MQTT(Credentials):
         self.identifier_to_monitor = None
         self.module_shorten = None
         self.point_shorten = None
+        self.telemetry_topic = None
+        self.telemetry_source_topic = None
         
     def load_credentials(self):
         if os.path.exists(f"{ASSETS_PATH}{CREDENTIALS_FILE}"):
@@ -149,3 +152,21 @@ class MQTT(Credentials):
     
     def disconnect(self):
         self.client.disconnect()
+
+    def telemetry(self, *args, **kwargs):
+        # print(str(kwargs['msg'].payload))
+        from_topic = (str(kwargs['msg'].topic))
+        # Find the start and end indices of the matching substring
+        start_index = from_topic.find(self.telemetry_source_topic)
+        end_index = start_index + len(self.telemetry_source_topic)
+        if start_index >= 0:
+            # Replace the matching substring with z
+            new_x = from_topic[:start_index] + self.telemetry_topic + from_topic[end_index:]
+            # print(new_x)  # Output: "dfhsjdkfhk"
+        else:
+            # Handle case where y is not found in x
+            print("Substring not found in string.")
+        
+        to_topic = new_x
+        self.client.publish(topic=to_topic, payload=kwargs['msg'].payload)
+
