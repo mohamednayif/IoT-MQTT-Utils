@@ -8,6 +8,7 @@ import json
 from time import sleep, time
 import os
 from constants import *
+import logging
 
 class MQTT(Credentials):
     def __init__(self, **kwargs) -> None:
@@ -165,8 +166,10 @@ class MQTT(Credentials):
             # print(new_x)  # Output: "dfhsjdkfhk"
         else:
             # Handle case where y is not found in x
+            # logging.ERROR("Substring not found in string.")
             print("Substring not found in string.")
         
         to_topic = new_x
+        logging.info(kwargs['msg'].payload)
         self.client.publish(topic=to_topic, payload=kwargs['msg'].payload)
 

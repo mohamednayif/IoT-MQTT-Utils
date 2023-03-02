@@ -1,10 +1,12 @@
 # pyinstaller -w --onefile --console --name="Telemetry" "Telemetry.py"  --specpath=build
 # pyinstaller -w --onefile --name="Telemetry" Telemetry.py --specpath=build
 from MQTT import MQTT 
-import pandas as pd
 import asyncio
 from time import sleep
+import logging
 
+logging.basicConfig(filename='telemetry.log', level=logging.INFO,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 async def main():
     Mqtt = MQTT(on_connect_funcs=['subscribe'], on_message_funcs=['telemetry'])      
@@ -21,11 +23,9 @@ async def main():
             Mqtt.client.loop_forever()
         except KeyboardInterrupt:
             # print("Stopping")
-            Mqtt.client.disconnect()
-            Mqtt.client.loop_stop()
-            sleep(5)
+            logging.error(f"KeyInterrupt Exception")
         except Exception as e:
-            print(e)
+            logging.error(f"Main Exception: {e}")
             sleep(5)
 
 if __name__ == "__main__":
